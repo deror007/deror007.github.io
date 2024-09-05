@@ -1,0 +1,1 @@
+We need to downscale the sig_icon as it loads slowly compared to the rest of the site.
