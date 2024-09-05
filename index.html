@@ -61,7 +61,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- <h1 class="w3-jumbo"><span class="w3-hide-small">Hi, I'm</span> Russell de Roeper.</h1> -->
     <h1 class="w3-jumbo" id="typewriter"><span></span></h1>
 
-    <script>
+    <!-- <script>
       var i = 0;
       var txt = "Hello, I'm Russell de Roeper.";
       var speed = 100;
@@ -78,7 +78,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         document.querySelector("#typewriter span").innerHTML = ""; // Clear initial text
         typeWriter();
       });
-      </script>
+      </script> -->
 
     <p>UCL MSc Cognitive and Decision Sciences Student and Part-Time Data Scientist</p>
     <!-- <img src="imgs/Russell Profile Image.png" alt="boy" class="w3-image" width="992" height="1108"> -->
@@ -93,42 +93,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
       adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
-    <!-- <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Photography</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-    </div>
-    <p class="w3-wide">Web Design</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-    </div>
-    <p class="w3-wide">Photoshop</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div><br> -->
-    
-    <!-- <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div> -->
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
         
   <!-- End About Section -->
   </div>
@@ -141,11 +106,77 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <!-- Grid for portfolio collapsibles -->
     <div class="w3-row-padding" style="margin:0 -16px">
+      <button type="button" class="collapsible">Open Section 1</button>
+      <div class="collapsibleContent">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <button type="button" class="collapsible">Open Section 2</button>
+      <div class="collapsibleContent">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <button type="button" class="collapsible">Open Section 3</button>
+      <div class="collapsibleContent">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      
+      <!-- <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script> -->
 
    
     <!-- End portfolio collapsibles -->
     </div>
   <!-- End Portfolio Section -->
+
+  <script>
+    // Typewriter effect code 
+    var i = 0;
+    var txt = "Hello, I'm Russell de Roeper.";
+    var speed = 100;
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.querySelector("#typewriter span").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector("#typewriter span").innerHTML = ""; // Clear initial text
+      typeWriter();
+    });
+
+    // Collapsible Portfolio interaction code
+    var coll = document.getElementsByClassName("collapsible");
+      var j;
+      
+      for (j = 0; j < coll.length; j++) {
+        coll[j].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+
   </div>
   
 
