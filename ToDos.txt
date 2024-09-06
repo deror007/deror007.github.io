@@ -1,1 +1,3 @@
-We need to downscale the sig_icon as it loads slowly compared to the rest of the site.
+1. We need to downscale the sig_icon as it loads slowly compared to the rest of the site.
+
+2. Use the github stored versions of the images as they cant be displayed using the local imgs folder.
