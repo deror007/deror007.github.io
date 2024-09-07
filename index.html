@@ -114,7 +114,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <button type="button" class="collapsible">Image to Gallery Artwork Recommender</button>
       <div class="collapsibleContent">
         <img src="imgs/image to art Gallery recommender.jpg" class="collapsibleImage" style="width: 520px; height: 520px;">
-        <p>1. Link hugging space code example.</p>
+        <p>This project was built during my time at Oscore ltd. for the client Signet Contemporary Art (a london-based art gallery). The reference image includes their artworks on the output section of the program. The client wanted to make improvements for their website, so with some brainstorming with other developers we have created an artwork recommender. When the program is given an image, a particular artstyle and a number of outputs as input; the program outputs several similar artworks available from the art gallery. This way potential customers with an idea of what they want can more efficiently search the website for artworks.<br><br> By using a pretrained convolutional neural network that is trained on the ImageNet 1000 dataset. This neural network would output 1000 numbers representing how likely an image is to be one of the 1000 classes of the dataset. With this in mind, similar images will have similar results in the output of the network, and less similar images will have less similar results in the output of the model. So for this progam we have generated and saved a collection of outputs from the art gallery, were each image results in a vector (the output) of 1000 numbers between 0-1. Then using this set of vectors whenever an input image is given, the program runs the CNN to encode it into a vector like before and measures the distance between this input vector with the other vectors in our set. The most similar images will have the smallest distances, and we output the top-n artworks with the smallest results.<br><br> The reference image shows an example of this process were the output returns 5 images and we can suggest artwork over all genres in the gallery. Apparently, I look like Sean Connery's James Bond 😎. This program only uses a small subset of the art gallery where we have taken 8 images per art genre. To improve the output of recommendations, a person can increase the image database and corresponding set of vectors. You can play with it here.</p>
       </div>
       <button type="button" class="collapsible">ChatGPT Ticket Helper with Azure DevOps Webhook</button>
       <div class="collapsibleContent">
@@ -144,7 +144,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-section">
       <p>Let's get in touch. Send me a message.</p>
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> London, UK</p>
-      <!-- <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +44 786861146</p> -->
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: russell.roeper@gmail.com</p>
       <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> LinkedIn: Russell de Roeper</p>
       <p><i class="fa fa-github  fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> GitHub: Deror007</p>
