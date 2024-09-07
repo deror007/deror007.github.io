@@ -24,3 +24,36 @@
     background-color: rgb(23, 22, 22);
     /* margin-bottom: 18px; */
   }
+
+  .flex-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between image and text */
+  }
+  
+  .collapsibleImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: #dbdbdb;
+  }
+
+  .image-center {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure the container takes full width */
+  }
+
+
+  
+  @media (max-width: 1180px) {
+    .flex-container {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center items horizontally */
+    }
+  }
