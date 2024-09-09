@@ -57,7 +57,11 @@
     width: 100%; /* Ensure the container takes full width */
   }
 
-
+  .center-diagram-image {
+    max-width: 100%;
+    height: auto;
+    transform: rotate(-90deg);
+  }
   
   @media (max-width: 1180px) {
     .flex-container {
