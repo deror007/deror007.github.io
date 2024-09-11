@@ -53,16 +53,3 @@ document.addEventListener("DOMContentLoaded", function() {
         '<i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right w3-hover-opacity"></i> ' + githubUrl +
         '</a>';
 });
-
-// Copy email to clipboard
-function copyEmailToClipboard() {
-    // Get the email text
-    var email = document.getElementById("email").textContent;
-
-  
-     // Copy the email
-    navigator.clipboard.writeText(email);
-  
-    // Alert the copied text
-    alert("Copied " + email + " to clipboard.");
-}
