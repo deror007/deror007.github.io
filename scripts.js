@@ -79,4 +79,48 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Leaf Interaction (Click and Hover)
+    document.addEventListener('mousemove', (e) => {
+        const leaves = document.querySelectorAll('.leaf-interactive');
+        let hoveringLeaf = false;
+
+        leaves.forEach(leaf => {
+            const rect = leaf.getBoundingClientRect();
+            const padding = 15;
+            if (e.clientX >= rect.left - padding && e.clientX <= rect.right + padding &&
+                e.clientY >= rect.top - padding && e.clientY <= rect.bottom + padding) {
+                hoveringLeaf = true;
+            }
+        });
+
+        if (hoveringLeaf) {
+            document.body.classList.add('leaf-hover');
+        } else {
+            document.body.classList.remove('leaf-hover');
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        const leaves = document.querySelectorAll('.leaf-interactive');
+        leaves.forEach(leaf => {
+            const rect = leaf.getBoundingClientRect();
+            const padding = 15;
+            if (e.clientX >= rect.left - padding && e.clientX <= rect.right + padding &&
+                e.clientY >= rect.top - padding && e.clientY <= rect.bottom + padding) {
+
+                leaf.classList.add('clicked');
+
+                if (leaf.dataset.clickTimeout) {
+                    clearTimeout(parseInt(leaf.dataset.clickTimeout));
+                }
+
+                const timeoutId = setTimeout(() => {
+                    leaf.classList.remove('clicked');
+                }, 600);
+
+                leaf.dataset.clickTimeout = timeoutId.toString();
+            }
+        });
+    });
 });
