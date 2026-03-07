@@ -340,10 +340,10 @@ section {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background: var(--accent-color);
+    background: #ffffff;
     border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.15;
+    filter: blur(70px);
+    opacity: 0.5;
     z-index: -1;
     animation: pulse 4s ease-in-out infinite;
 }
@@ -353,10 +353,12 @@ section {
     0%,
     100% {
         transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
     }
 
     50% {
-        transform: translate(-50%, -50%) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
     }
 }
 
