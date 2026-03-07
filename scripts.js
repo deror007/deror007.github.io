@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailLink = document.getElementById("email-link");
 
     if (emailDisplay) {
-        emailDisplay.textContent = emailStr;
+        emailDisplay.textContent = "Email";
     }
     if (emailLink) {
         emailLink.href = "mailto:" + emailStr;
