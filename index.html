@@ -1,194 +1,259 @@
-<!-- A W3 schools template :D -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Russell de Roeper</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="icon" type="image/x-icon" href="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/Sig_Icon.jpg"> -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="portfolio_styles.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Russell de Roeper - Portfolio</title>
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="portfolio_styles.css">
 </head>
-<body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- NOTE: Potential Light and dark mode here.-->
-<!--   <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/Sig_Icon.jpg" alt="Signature Icon" style="width: 120px; height: 120px;"> -->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>SUMMARY</p>
-  </a>
-  <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PORTFOLIO</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
+<body class="dark-theme">
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SUMMARY</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" style="width:25% !important">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <!-- <h1 class="w3-jumbo"><span class="w3-hide-small">Hi, I'm</span> Russell de Roeper.</h1> -->
-    <h1 class="w3-jumbo" id="typewriter"><span></span></h1>
-
-    <p>UCL MSc Cognitive and Decision Sciences Graduate and Deep Learning Practitioner</p>
-    <!-- <img src="imgs/russell_img.jpg" alt="me" class="w3-image" width="756" height="975"> -->
-    <div class = "image-center">
-      <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/russell_img_compressed.jpg" alt="me" width="378" height="488" class="center-main-image">
+  <!-- Responsive Sidebar / Navbar -->
+  <nav class="glass-nav">
+    <div class="nav-links">
+      <a href="#home" class="nav-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="#about" class="nav-item">
+        <i class="fa-solid fa-user"></i>
+        <span>Summary</span>
+      </a>
+      <a href="#portfolio" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Portfolio</span>
+      </a>
+      <a href="#contact" class="nav-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Contact</span>
+      </a>
     </div>
-  </header>
+  </nav>
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey " id="about">
- 
-    <h2 class="w3-text-light-grey">Summary</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p style="color: white;">I am a recent Computer Science and AI graduate from Loughborough University and a former software developer at Oscore Ltd. I have always been captivated by the idea of thinking machines and the human mind. These interests have led me to become a MSc Cognitive and Decision Science student at UCL, where I explored the human mind from a computational perspective. I was awarded a Distinction with a Dean's List Nomination for my MSc studies. I am looking to apply my studies in the Cognitive Sciences to tackle continual learning in deep neural networks, particularly in Large Language Models. Alongside my MSc degree, I am working part-time as a freelance software developer and piano tutor. In the future, I want to continue exploring my research interests, and apply it to real-world problems.</p>
-    </p>
+  <!-- Main Content Area -->
+  <main id="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section fade-in-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </h1>
+        <p class="hero-subtitle">MSc Cognitive and Decision Sciences Graduate & Deep Learning Practitioner</p>
 
-    <!-- <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button> --> 
-    <a href="https://drive.google.com/file/d/1BlrAIoyL4dlbYJuZbQ8S3lX4nHoYUvUj/view?usp=sharing" target="_blank">
-      <button class="w3-button w3-light-grey w3-padding-large w3-section">
-        <i class="fa fa-download"></i> Download Resume
-      </button>
-    </a>
-
-        
-  <!-- End About Section -->
-  </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="portfolio">
-  
-    <h2 class="w3-text-light-grey">Coding Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <!-- Grid for portfolio collapsibles -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      
-      <button type="button" class="collapsible ">Point Cloud Optimiser using a Genetic Algorithm</button>
-      <div class="collapsibleContent">
-        <div class="flex-container">
-          <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/zed_robot_camera.jpg" alt="Robot with Zed Camera" class="collapsibleImage" style="width: 257px; height: 347px;">
-          <p>During my summer internship with Loughborough University's Intelligent Automation Centre <a href="https://www.lboro.ac.uk/research/intelligent-automation/" target="_blank">(IAC)</a>, I was working on a method to optimise the Zed 2 Stereo Camera.<br><br> This device uses 2 cameras to produce point clouds. Point Clouds are 3D data structures that measure depth for each pixel in an image, this captures information of a 3D scene. The problem is that the quality of these point clouds generated by Zed 2 Camera's can be affected by the environment's lighting. The Zed 2 comes with many parameters that can be tuned to minimise this problem, but finding the optimal setting is difficult due to the huge number of combinations. <br><br> To minimise this problem, colleagues at the research centre and I spent the summer developing a genetic algorithm to search the space of possible settings that produce the best point clouds. Later on, I was able to represent Loughborough University by giving an oral presentation at the 2022 3D Metrology Conference in Aachen, Germany. Here is a <a href="https://www.3dmc.events/modules/static/archive/media/files/2022/Russell%20de%20Roeper%20-%20An%20Automated%20Approach%20To%20Evaluate.pdf" target="_blank">link</a> to the presentation slides that I have used for the conference.</p>
+        <div class="hero-buttons">
+          <a href="#portfolio" class="btn btn-primary">View Work</a>
         </div>
       </div>
-      
-      <button type="button" class="collapsible">Variational Autoencoder Studies using Pytorch</button>
-      <div class="collapsibleContent">
-        <p>I have been exploring Generative AI through the book "Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play by David Foster". Throughout the book elements of Variational Autoencoders (VAE's), have been crucial to this fields development through the concepts of encoders, decoders and latent spaces. What caught my eye is its use in the 2018 paper World Model's where an RL agent learns to recreate the pixel observation of a game. Then the agent uses these reconstructions to predict future game observations, thus creating a model of the game environment. Due to the VAE's efficient sampling from its latent space, the agent can simulate the game environment as if it were 'dreaming' it, without the need for actual observations. This simulated environment can only work after being trained on the environment to first understand the game observations. This motivated my studies into learning and implementing the VAE. I recommend clicking this <a href="https://worldmodels.github.io/" target="_blank">link</a> for an interactive demo and explanation of the World Model paper, I am sure you will find it inspiring as I do.</p>
-        <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/improve_VAE%2064%20z%20vector%20recon.png" class="collapsibleImage">
-        <figcaption>64-Dimensional Latent Vector Reconstruction</figcaption>
-        <br><br>
-        <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/improve_VAE%20384%20z%20vector%20recon.png" class="collapsibleImage">
-        <figcaption>384-Dimensional Latent Vector Reconstruction</figcaption>
-        <p>Using Pytorch, I have recreated the 2018 World Model's VAE architecture and applied it to the Cifar10 dataset. The images show the original and corresponding reconstructions. There are a few takeaways from these images. The first is that when the dimension of the latent vector increases, the quality of the reconstruction also increases as more detail can be stored in a larger vector for decoding. The other point is that the reconstructions are blurry. There are a few reasons for this, but the main reason is that VAE's focuses on structuring the latent space for better generative sampling as well as recreating precise reconstructions. During training it tries to minimise the loss between these two objectives, which forces the model to balance between the objectives. I am currently looking to improve this model by adjusting the model's loss to produce better quality results.</p>
+      <div class="hero-image-container">
+        <div class="image-glow"></div>
+        <img
+          src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/russell_img_compressed.jpg"
+          alt="Russell de Roeper" class="hero-image">
       </div>
-      
-      <button type="button" class="collapsible">2-Player Bullet Dodger Arcade Game</button>
-      <div class="collapsibleContent">
-        <div class="flex-container">
-          <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/Bullet%20Dodger%20example.jpg"  class="collapsibleImage" style="width: 420px; height: 420px;">
-          <p>I really enjoyed working on this side-project. It is a 2-player arcade game where the objective for the red rectangle player is to shoot the blue player by moving with the "left, right" arrow keys and shoot projectiles with the "a,s,d,f" keys. The blue player uses the mouse to dodge and evade the projectiles, and the score increases for every second the blue player survives. In this case I survived for only 6 seconds 😅.<br><br> I wanted to create this game in order to program simple physics for a potential Reinforcement Learning environment. The "a" key is a green bullet that moves straight at a constant speed. The "s" key is the shotgun key that shoots 3 yellow projectiles at 3 angles. The "d" key is the Tomahawk key that bounces a pink projectile off the closest side wall. Lastly, the "f" key is the grenade key, that shoots a white projectile that can bounce off objects and explodes after 5 seconds. This projectile particularly slows down as it moves to simulate wind or a rolling grenade when thrown. I have used PyGame to produce this. <br><br>Originally this game was meant to be an RL environment for the World Models recreation for my VAE. I created a dataset of game observations by using basic automated agents to simulate game data. However, VAE reconstructions of this particular environment is difficult as the VAE hits a local minima by recreating the black background with faint red and blue colours, most likely due to the blurrying effect of VAE's. These are not useful observations for a pixel exact game like this, so I repurposed the environment as a good-old arcade game.</p> 
-        </div>
-      </div>
-      
-      <button type="button" class="collapsible">Image to Artwork Recommender</button>
-      <div class="collapsibleContent">
-        <div class="flex-container">
-          <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/image%20to%20art%20Gallery%20recommender.jpg" class="collapsibleImage" style="width: 520px; height: 520px;">
-          <p>This project was built during my time at <a href="https://oscore.io/" target="_blank">Oscore</a> Ltd. for a client who owns an art gallery. The client wanted to have new ways to browse the gallery, so with some brainstorming with other developers we created a proof-of-concept artwork recommender. When the program is given an image, a particular artstyle and the total number of suggestions as input; the program outputs several similar artworks available from the art gallery. This way, potential customers with an idea of what they want can more efficiently find artworks.<br><br> By using a pretrained convolutional neural network that is trained on the ImageNet 1000 dataset. This neural network would output 1000 numbers representing how likely an image is to be one of the 1000 classes of the dataset. With this in mind, similar images will have similar results in the output of the network, and less similar images will have less similar results in the output of the model. So for this progam we have generated and saved a collection of outputs from the art gallery, where each image results in a vector (the output) of 1000 numbers between 0-1. Then using this set of vectors whenever an input image is given, the program runs the CNN to encode it into a vector and measures the distance between this input vector with the other vectors in our set. The most similar images will have the smallest distances, and we output the top-n artworks with the smallest results.<br><br> The reference image shows an example of this process where the output returns 5 images and we can suggest artwork over all genres in the gallery. Apparently, I look like Sean Connery's James Bond 😎. This program only uses a small subset of the art gallery where we have taken 8 images per art genre. To improve the output of recommendations, a person can increase the image database and corresponding set of vectors. You can play with it <a href="https://huggingface.co/spaces/Deror/image-to-artwork_recommendation" target="_blank">here</a>.</p> 
-        </div>
-      </div>
+    </section>
 
-      <button type="button" class="collapsible">ChatGPT Ticket Helper with Azure DevOps Webhook</button>
-      <div class="collapsibleContent">
-        <div class="flex-container">
-          <p>This is another project I worked on during my time at <a href="https://oscore.io/" target="_blank">Oscore</a> Ltd. With the huge interest of using Large Language Models as an assistive tool in programming, Oscore wanted an internal tool that automatically writes messages and potential solutions for work items found in Azure DevOps ticketing system. This would help developers in completing tickets faster, by having ideas or starter code be generated to help solve the problem. This therefore increases productivity internally.<br><br> In order to do this a webhook is triggered whenever a ticket is made on Azure DevOps which calls a Flask API to generate the ChatGPT responses. To get the responses we provide the LLM details of the ticket using OpenAI's Assistant API, and ask for potential solutions for this ticket. This all happens in a separate thread within the triggered flask api call. When the responses are created, they are passed to Azure DevOps REST API, and the responses are displayed in markdown for improved visuals within that ticket's comment section.</p>
-        </div>
-      </div>
-      
-      <button type="button" class="collapsible">BSc Final Year Project: A Neuro-Symbolic Reinforcement Learning approach with the Logic Tensor Network.</button>
-      <div class="collapsibleContent">
-        <div class="image-center">
-          <img src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/LTN%20%2B%20DDQN%20Overview.jpg" class="center-diagram-image" style="width: 375px; height: 375px;">
-        </div>
-          <p>This was my final year project at Loughborough University under the supervision of <a href="https://andrea.soltoggio.net/" target="_blank">Dr. Andrea Soltoggio</a>. Neuro-Symbolic models focus on combining traditional Symbolic AI with neural network models. An example of a neuro-symbolic model is the Logic Tensor Network (LTN) which uses formal logic with neural networks to embed knowledge into the model. With this, I explored how this can be used to make an interpretable reinforcement learning agent within the Minihack RL environment. By taking advantage of Minihack's ascii-based observations, I was able to provide the agent information about the game environment and customise a loss function based on this. Using the LTN's formal logic language called Real Logic, I was able to express this information in its knowledge base. The LTN calculate loss by measuring how it's output satisfies this knowledge base. The better that it satisfies the knowledge base, the lower the loss. It follows the original Deep Q-Network paper by using epsilon-greedy strategy to either explore the state space or exploit it's best known actions by utilising its neural network to compute Q-values.<br><br> For this project I was happily awarded 84%. I have attached my paper <a href="https://drive.google.com/file/d/1FmMmpiXoLWELcIfHDG2rpANI3sxNqOdn/view?usp=sharing" target="_blank">here</a>.</p>
-        </div>
-      
-   
-    <!-- End portfolio collapsibles -->
-    </div>
-  <!-- End Portfolio Section -->
+    <!-- About Section -->
+    <section id="about" class="about-section fade-in-section">
+      <h2 class="section-title">Summary<span class="accent-dot">.</span></h2>
+      <div class="about-content glass-card">
+        <p>I am a recent Computer Science and AI graduate from Loughborough University and a former software developer
+          at Oscore Ltd. I have always been captivated by the idea of thinking machines and the human mind. These
+          interests have led me to become a MSc Cognitive and Decision Science student at UCL, where I explored the
+          human mind from a computational perspective. I was awarded a Distinction with a Dean's List Nomination for my
+          MSc studies.</p>
+        <p>I am looking to apply my studies in the Cognitive Sciences to tackle continual learning in deep neural
+          networks, particularly in Large Language Models. Alongside my MSc degree, I am working part-time as a
+          freelance software developer and piano tutor. In the future, I want to continue exploring my research
+          interests, and apply it to real-world problems.</p>
 
-    
-
-  </div>
-  
-
-  <!-- Contact Section -->
-  <div class=" w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p style ="color: white;">Let's get in touch. Send me a message.</p>
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> London, UK</p>
-      <!-- <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: russell.roeper@gmail.com</p> -->
-      <p>
-        <i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 
-        Email: <span id="email"></span>
-      </p>
-      
-      <p id="linkedin">
-        <a href="https://www.linkedin.com/in/russellderoeper/" target="_blank">
-          <i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right w3-hover-opacity"></i>
+        <a href="https://drive.google.com/file/d/1BlrAIoyL4dlbYJuZbQ8S3lX4nHoYUvUj/view?usp=sharing" target="_blank"
+          class="btn btn-secondary" style="margin-top: 20px;">
+          <i class="fa-solid fa-download"></i> Download Resume
         </a>
-      </p>
-      <p id = "github">
-        <a href="https://github.com/deror007" target="_blank">
-          <i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right w3-hover-opacity"></i>
-        </a>
-      </p>
-    </div><br>
-    
+      </div>
+    </section>
 
-  </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section fade-in-section">
+      <h2 class="section-title">Coding Projects<span class="accent-dot">.</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card">
+          <div class="project-image-wrapper">
+            <img
+              src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/zed_robot_camera.jpg"
+              alt="Robot with Zed Camera" class="project-img" style="object-position: top;">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Point Cloud Optimiser</h3>
+            <p class="project-desc">Developed a genetic algorithm to search the space of possible settings for the Zed 2
+              Stereo Camera to optimize point clouds at the Intelligent Automation Centre.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Genetic Algorithms</span>
+              <span class="tech-tag">3D Vision</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <a href="https://www.3dmc.events/modules/static/archive/media/files/2022/Russell%20de%20Roeper%20-%20An%20Automated%20Approach%20To%20Evaluate.pdf"
+              target="_blank" class="project-link">View Presentation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card">
+          <div class="project-image-wrapper">
+            <img
+              src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/improve_VAE%20384%20z%20vector%20recon.png"
+              alt="VAE Latent Vector Reconstruction" class="project-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Variational Autoencoders</h3>
+            <p class="project-desc">Recreation of the 2018 World Model's VAE architecture applied to the Cifar10 dataset
+              using PyTorch. Explored the effects of varying latent space dimensionality.</p>
+            <div class="project-tech">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Generative AI</span>
+              <span class="tech-tag">Deep Learning</span>
+            </div>
+            <a href="https://worldmodels.github.io/" target="_blank" class="project-link">Learn about World Models <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card">
+          <div class="project-image-wrapper">
+            <img
+              src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/Bullet%20Dodger%20example.jpg"
+              alt="Bullet Dodger Game" class="project-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">2-Player Bullet Dodger</h3>
+            <p class="project-desc">A fast-paced 2-player arcade game built with PyGame. Features custom projectile
+              physics, originally purposed as a Reinforcement Learning environment.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PyGame</span>
+              <span class="tech-tag">Physics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card">
+          <div class="project-image-wrapper">
+            <img
+              src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/image%20to%20art%20Gallery%20recommender.jpg"
+              alt="Art Recommender" class="project-img" style="object-fit: contain; background: #000;">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Artwork Recommender</h3>
+            <p class="project-desc">Proof-of-concept built using a pretrained ImageNet CNN at Oscore Ltd. Recommends
+              similar artworks from a gallery based on an input image by computing vector distances.</p>
+            <div class="project-tech">
+              <span class="tech-tag">CNN</span>
+              <span class="tech-tag">ImageNet</span>
+              <span class="tech-tag">Recommender</span>
+            </div>
+            <a href="https://huggingface.co/spaces/Deror/image-to-artwork_recommendation" target="_blank"
+              class="project-link">Try the Demo <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card">
+          <div class="project-image-wrapper">
+            <div
+              style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background: #1a202c;">
+              <i class="fa-brands fa-microsoft fa-4x" style="color: #0078D4;"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">ChatGPT Ticket Helper</h3>
+            <p class="project-desc">Internal tool built for Oscore Ltd. Uses an Azure DevOps webhook and a Flask API to
+              automatically generate ChatGPT responses with potential solutions for new work tickets.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Azure DevOps</span>
+              <span class="tech-tag">Flask API</span>
+              <span class="tech-tag">OpenAI API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-card">
+          <div class="project-image-wrapper">
+            <img
+              src="https://media.githubusercontent.com/media/deror007/deror007.github.io/main/imgs/LTN%20%2B%20DDQN%20Overview.jpg"
+              alt="LTN + DDQN Architecture" class="project-img" style="object-fit: contain;">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Neuro-Symbolic Reinforcement Learning</h3>
+            <p class="project-desc">BSc Final Year Project exploring how to build an interpretable RL agent within
+              Minihack using Logic Tensor Networks (LTN). Combines formal logic embedding with Deep Q-Networks.</p>
+            <div class="project-tech">
+              <span class="tech-tag">RL</span>
+              <span class="tech-tag">Neuro-Symbolic AI</span>
+              <span class="tech-tag">LTN</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1FmMmpiXoLWELcIfHDG2rpANI3sxNqOdn/view?usp=sharing" target="_blank"
+              class="project-link">Read Paper <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section fade-in-section">
+      <h2 class="section-title">Let's Connect<span class="accent-dot">.</span></h2>
+      <div class="contact-card glass-card">
+        <p class="contact-desc">I am currently looking to apply my studies to real-world problems. Feel free to reach
+          out to me for opportunities or just to say hi!</p>
+
+        <div class="contact-links">
+          <a href="#" class="contact-item" id="email-link">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <span id="email" style="word-break: break-all;"></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/russellderoeper/" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/deror007" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+            <span>GitHub</span>
+          </a>
+
+          <div class="contact-item no-hover">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <span>London, UK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Russell de Roeper</p>
+    </footer>
+
+  </main>
+
   <script src="scripts.js"></script>
-</div>
-
 </body>
+
 </html>

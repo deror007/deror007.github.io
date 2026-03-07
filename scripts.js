@@ -1,55 +1,82 @@
+// Typewriter effect logic
+document.addEventListener("DOMContentLoaded", function () {
+    const textToType = "Russell de Roeper";
+    const typewriterElement = document.querySelector("#typewriter");
+    let i = 0;
+    const speed = 100;
 
-// Typewriter effect code 
-var i = 0;
-var txt = "Hello, I'm Russell de Roeper.";
-var speed = 100;
-
-function typeWriter() {
-    if (i < txt.length) {
-    document.querySelector("#typewriter span").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+    function typeWriter() {
+        if (i < textToType.length) {
+            typewriterElement.innerHTML += textToType.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
     }
-}
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector("#typewriter span").innerHTML = ""; // Clear initial text
-    typeWriter();
-});
-
-// Collapsible Portfolio interaction code
-var coll = document.getElementsByClassName("collapsible");
-var j;
-
-for (j = 0; j < coll.length; j++) {
-coll[j].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-    content.style.display = "none";
-    } else {
-    content.style.display = "block";
+    if (typewriterElement) {
+        typewriterElement.innerHTML = "";
+        setTimeout(typeWriter, 500);
     }
-});
-}
 
-// Obfuscate email and add social media links
-document.addEventListener("DOMContentLoaded", function() {
-    var email = "russell.roeper" + "@" + "gmail.com";
-    document.getElementById("email").textContent = email;
+    // Obfuscate email
+    const emailStr = "russell.roeper" + "@" + "gmail.com";
+    const emailDisplay = document.getElementById("email");
+    const emailLink = document.getElementById("email-link");
 
+    if (emailDisplay) {
+        emailDisplay.textContent = emailStr;
+    }
+    if (emailLink) {
+        emailLink.href = "mailto:" + emailStr;
+    }
 
+    // Set current year in footer
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 
-    var linkedinUrl = "https://www.linkedin.com/in/russellderoeper/";
-    var githubUrl = "https://github.com/deror007";
+    // Scroll reveal animations using Intersection Observer
+    const sections = document.querySelectorAll('.fade-in-section');
 
-    document.getElementById("linkedin").innerHTML = 
-        '<a href="' + linkedinUrl + '" target="_blank">' +
-        '<i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right w3-hover-opacity"></i> ' + linkedinUrl +
-        '</a>';
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
 
-    document.getElementById("github").innerHTML = 
-        '<a href="' + githubUrl + '" target="_blank">' +
-        '<i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right w3-hover-opacity"></i> ' + githubUrl +
-        '</a>';
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Active Navigation Link Highlighting
+    const navItems = document.querySelectorAll('.nav-item');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').includes(current)) {
+                item.classList.add('active');
+            }
+        });
+    });
 });
